@@ -1,0 +1,42 @@
+.special-heading {
+
+    font-size: 3rem;
+    font-variant: small-caps;
+    position: relative;
+    color: white;
+    text-align: center;
+    line-height: 1;
+    filter: drop-shadow(0 0 5px white);
+
+    span {
+        font-size: 1rem;
+    }
+
+    a {
+        color: white;
+        font-family: var(--font-acc-2);
+        font-size: 2rem;
+        animation: light 4s ease-in-out infinite;
+
+        @keyframes light {
+            50% {
+                filter: drop-shadow(0 0 5px var(--accent-clr))
+                drop-shadow(0 0 5px var(--accent-clr))
+                drop-shadow(0 0 10px var(--accent-clr))
+                ;
+            }
+        }
+        
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 50%;
+        height: 3px;
+        background-color: var(--accent-clr);
+        bottom: -0.2rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
